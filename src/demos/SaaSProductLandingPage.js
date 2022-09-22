@@ -138,35 +138,17 @@ export default () => {
         }
         faqs={[
           {
-            question: "Are all the templates easily customizable ?",
-            answer:
-              "Yes, they all are. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            question: "IT Geeks meaning ?",
+            answer:"IT (Information technology ) is the use of any computers, storage, networking and other physical devices, infrastructure and processes to create process, store, secure and exchange all forms of electronic data "
           },
           {
-            question: "How long do you usually support an standalone template for ?",
-            answer:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            question: "Why you should join IT Geeks club ?",
+            answer:"Our club is the perfect place to grow your network and meet new people with different skills and experiences in differents IT domains (backend developement ,frontend developement , IA … ) You'll as well gain knowledge, skills and experiences in leadership,presentation, communication and problem-solving." 
           },
           {
-            question: "What kind of payment methods do you accept ?",
-            answer:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            question: "What are club activities ?",
+            answer:"IT Geeks club offers a multitude of events for university students with an interest in computer science such as hackathons, competitions and university events during all the academic year.Events and competitions will be posted in our instagram, facebook and LinkdIn accounts." 
           },
-          {
-            question: "Is there a subscribption service to get the latest templates ?",
-            answer:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          },
-          {
-            question: "Are the templates compatible with the React ?",
-            answer:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          },
-          {
-            question: "Do you really support Internet Explorer 11 ?",
-            answer:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          }
         ]}
       />
       <GetStarted/>
