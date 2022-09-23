@@ -45,7 +45,7 @@ const CustomersLogoStrip = styled.div`
   }
 `;
 
-export default ({ roundedHeaderButton }) => {
+export default ({title,content,roundedHeaderButton}) => {
   return (
     <>
       <Header roundedHeaderButton={roundedHeaderButton} />
@@ -53,11 +53,10 @@ export default ({ roundedHeaderButton }) => {
         <TwoColumn>
           <LeftColumn>
             <Heading>
-              Beautiful React Templates <span tw="text-primary-500">for you.</span>
+        {title}
             </Heading>
             <Paragraph>
-              Our templates are easy to setup, understand and customize. Fully modular components with a variety of
-              pages and components.
+             {content}
             </Paragraph>
             <Actions>
               <input type="text" placeholder="Your E-mail Address" />
