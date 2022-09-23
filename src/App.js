@@ -1,6 +1,6 @@
 import React from "react";
 import GlobalStyles from 'styles/GlobalStyles';
-
+import "./index.css";
 /* Inner Pages */
 //  import LoginPage from "pages/Login.js";
 //  import SignupPage from "pages/Signup.js";
