@@ -5,15 +5,15 @@ import Hero from "components/hero/TwoColumnWithInput.js";
 import Features from "components/features/ThreeColWithSideImage.js";
 import MainFeature2 from "components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
 import FeatureWithSteps from "components/features/TwoColWithSteps.js";
-import Pricing from "components/pricing/ThreePlans.js";
 import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js";
 import FAQ from "components/faqs/SingleCol.js";
 import GetStarted from "components/cta/GetStarted";
 import Footer from "components/footers/FiveColumnWithBackground.js";
 import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
 import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
-import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
-import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
+import { ReactComponent as Terminal } from "feather-icons/dist/icons/terminal.svg";
+import { ReactComponent as Team } from "feather-icons/dist/icons/user-check.svg";
+import { ReactComponent as Cooperat } from "feather-icons/dist/icons/pocket.svg";
 
 export default () => {
   const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
@@ -53,52 +53,29 @@ export default () => {
         imageSrc={prototypeIllustrationImageSrc}
         showDecoratorBlob={false}
         features={[
+       
+    
           {
-            Icon: MoneyIcon,
-            title: "Affordable",
-            description: "We promise to offer you the best rate we can - at par with the industry standard.",
+            Icon: Team,
+            title: "Professionalism",
+            description: "	We are a social environment where people with various technology experiences come together and share informations with one another.",
+            iconContainerCss: tw`bg-red-300 text-red-800`
+          },
+          {
+            Icon: Cooperat,
+            title: "Cooperat",
+            description: "We promise to offer you the best knowledge we can .",
             iconContainerCss: tw`bg-green-300 text-green-800`
           },
           {
-            Icon: BriefcaseIcon,
-            title: "Professionalism",
-            description: "We assure you that our templates are designed and created by professional designers.",
+            Icon: Terminal,
+            title: "geeks ",
+            description: "	We believe in the power of the computer science community.",
             iconContainerCss: tw`bg-red-300 text-red-800`
-          }
+          },
         ]}
       />
-      <Pricing
-        subheading={<Subheading>Pricing</Subheading>}
-        heading={
-          <>
-            Reasonable & Flexible <HighlightedText>Plans.</HighlightedText>
-          </>
-        }
-        plans={[
-          {
-            name: "Personal",
-            price: "$17.99",
-            duration: "Monthly",
-            mainFeature: "For Individuals",
-            features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance"]
-          },
-          {
-            name: "Business",
-            price: "$37.99",
-            duration: "Monthly",
-            mainFeature: "For Small Businesses",
-            features: ["60 Templates", "15 Landing Pages", "22 Internal Pages", "Priority Assistance"],
-            featured: true
-          },
-          {
-            name: "Enterprise",
-            price: "$57.99",
-            duration: "Monthly",
-            mainFeature: "For Large Companies",
-            features: ["90 Templates", "27 Landing Pages", "37 Internal Pages", "Personal Assistance"]
-          }
-        ]}
-      />
+
       <Testimonial
         subheading={<Subheading>Testimonials</Subheading>}
         heading={
