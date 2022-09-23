@@ -56,22 +56,23 @@ export default () => {
        
     
           {
+            Icon: Cooperat,
+            title: "Cooperat",
+            description: "We promise to offer you the best knowledge we can .",
+            iconContainerCss: tw`bg-green-300 text-green-800`
+          },
+          
+          {
             Icon: Team,
             title: "Professionalism",
             description: "	We are a social environment where people with various technology experiences come together and share informations with one another.",
             iconContainerCss: tw`bg-red-300 text-red-800`
           },
           {
-            Icon: Cooperat,
-            title: "Cooperat",
-            description: "We promise to offer you the best knowledge we can .",
-            iconContainerCss: tw`bg-green-300 text-green-800`
-          },
-          {
             Icon: Terminal,
             title: "geeks ",
             description: "	We believe in the power of the computer science community.",
-            iconContainerCss: tw`bg-red-300 text-red-800`
+            iconContainerCss: tw`bg-green-300 text-green-800`
           },
         ]}
       />

@@ -68,7 +68,7 @@ export default ({
   ),
   description = "Develop your career, grow your skill, collaborate with developers, and bring the It geeks network to life!",
   primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
+  primaryButtonUrl = "#Testimonial",
   imageSrc = TeamIllustrationSrc,
   buttonRounded = true,
   imageRounded = true,
