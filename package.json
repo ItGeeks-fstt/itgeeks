@@ -29,7 +29,7 @@
     "eject": "react-scripts eject",
     "deploy": "yarn build && netlify deploy --prod --dir=build",
     "postbuild": "rmdir /s /q docs & ren build docs"
-
+    
   },
   "eslintConfig": {
     "extends": "react-app",
