@@ -21,7 +21,16 @@ export default () => {
 
   return (
     <AnimationRevealPage>
-      <Hero roundedHeaderButton={true} />
+      <Hero 
+      title ={<span>IT Geeks do better than rest <span className="text-primary-500">put us to test </span></span>}
+      content = {<p>Welcome to IT Geeks Club 
+        <br></br>
+        IT Geeks is an approved club of the faculty of science and technology – tangier . Founded in 2022  by six founding meembers.
+        <br></br>
+        This group is dedicated to the technology enthusiast, and the sharing of ideas and experiences between computer science students in order to create a community.
+        <br></br>
+        So are you passionate about technology ? do you code ? do you design ? are you a debugger ? If you answered ‘yes ‘ to any of these questions and you want to learn more, join us now and don’t miss the chance.</p>}
+      roundedHeaderButton={true} />
       <Features
         subheading={<Subheading>Features</Subheading>}
         heading={
