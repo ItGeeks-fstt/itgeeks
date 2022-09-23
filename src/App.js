@@ -25,8 +25,8 @@ export default function App() {
       <GlobalStyles />
       <Router>
         <Routes>
-        <Route path="/aboutus" element={<AboutUsPage />} />
         <Route path="/contactus" element={<ContactUsPage />} />
+        <Route path="/aboutus" element={<AboutUsPage />} />
           <Route path="/" element={<SaaSProductLandingPage />} />
         </Routes>
       </Router>

@@ -5,12 +5,11 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
-// import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
+import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
 import SupportIconImage from "images/support-icon.svg";
 import ShieldIconImage from "images/shield-icon.svg";
 import CustomizeIconImage from "images/customize-icon.svg";
 import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
-
 
 const Heading = tw(SectionHeading)``;
 const Subheading = tw(SubheadingBase)`text-center mb-3`;
@@ -51,16 +50,6 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
   ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-40`}
 `;
 
-const FeatureIconContainer = styled.div`
-  ${tw`mx-auto inline-block   text-primary-500 text-center rounded p-2 flex-shrink-0`}
-  ${props => [
-    props.iconRoundedFull && tw`rounded-full`,
-    props.iconFilled && tw`border-0 bg-primary-500 text-gray-100`
-  ]}
-  svg {
-    ${tw`w-6 h-6`}
-  }
-`;
 export default ({
   cards = [
     {
@@ -106,24 +95,17 @@ export default ({
           {cards.map((card, i) => (
             <Column key={i}>
               <Card href={card.url}>
-                {/* <span className="imageContainer" css={imageContainerCss}>
+                <span className="imageContainer" css={imageContainerCss}>
                   <img src={card.imageSrc} alt="" css={imageCss} />
-                
-                </span> */}
-                 <FeatureIconContainer
-                  
-                      css={card.iconContainerCss}
-                    >
-                      {<card.Icon />}
-                    </FeatureIconContainer>
+                </span>
                 <span className="title">{card.title}</span>
                 <p className="description">{card.description}</p>
-                {/* {linkText && (
+                {linkText && (
                   <span className="link">
                     <span>{linkText}</span>
                     <ArrowRightIcon className="icon" />
                   </span>
-                )} */}
+                )}
               </Card>
             </Column>
           ))}

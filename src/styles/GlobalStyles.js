@@ -14,6 +14,11 @@ const GlobalStyles = createGlobalStyle(globalStyles, `
    .ReactModal__Overlay--before-close{
      transform: scale(0);
    }
+   .activeLink{
+    color:#1864ab;
+
+
+   }
 `)
 
 export default GlobalStyles

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import {Link} from 'react-router-dom'
+import {Link,NavLink} from 'react-router-dom'
 
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
@@ -16,6 +16,7 @@ const Header = tw.header`
   max-w-screen-xl mx-auto
 `;
 
+
 export const NavLinks = tw.div`inline-block`;
 
 /* hocus: stands for "on hover or focus"
@@ -26,21 +27,21 @@ const NavLinkStyle=` text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
 font-semibold tracking-wide transition duration-300
 pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500`
 
-export const NavLink = tw.span`
+export const LinkChildspan = tw.span`
 ${NavLinkStyle}
 `;
-export const NavLinkspan = tw.a`
+export const NavLinka = tw.a`
 ${NavLinkStyle}
 `;
 
-export const PrimaryLink = tw(NavLinkspan)`
+export const PrimaryLink = tw(NavLinka)`
   lg:mx-0
   px-8 py-3 rounded bg-primary-500 text-gray-100
   hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline
   border-b-0
 `;
 
-export const LogoLink = styled(NavLink)`
+export const LogoLink = styled(LinkChildspan)`
   ${tw`flex items-center font-black border-b-0 text-2xl! ml-0! `};
 
   img {
@@ -79,16 +80,18 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
    */
   const defaultLinks = [
     <NavLinks key={1}>
-    <Link to='/'>
-        <NavLink >Home</NavLink>
-    </Link>
-    <Link to='/aboutus'>
-        <NavLink >About</NavLink>
-    </Link>
+    <NavLink className={({ isActive }) => (isActive ? 'activeLink' : '')}  to='/'>
+        <LinkChildspan >Home</LinkChildspan>
+    </NavLink>
+  
 
-    <Link to='/contactus'>
-      <NavLink >Contact Us</NavLink>
-    </Link>
+    <NavLink className={({ isActive }) => (isActive ?  'activeLink' : '')} to='/contactus'>
+      <LinkChildspan >Contact Us</LinkChildspan>
+    </NavLink>
+
+    <NavLink className={({ isActive }) => (isActive ?  'activeLink': '')} to='/aboutus'>
+      <LinkChildspan >About Us</LinkChildspan>
+    </NavLink>
 
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} target="_blank" href="https://registration.itgeeks.social">
         registration
