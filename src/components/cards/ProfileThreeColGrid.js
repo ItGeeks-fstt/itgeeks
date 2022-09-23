@@ -5,7 +5,7 @@ import { css } from "styled-components/macro";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings";
 import {SectionDescription} from "components/misc/Typography";
-import { ReactComponent as TwitterIcon} from "images/twitter-icon.svg";
+import { ReactComponent as InstagramIcon} from "images/instagram.svg";
 import { ReactComponent as LinkedinIcon} from "images/linkedin-icon.svg";
 import { ReactComponent as GithubIcon } from "images/github-icon.svg";
 
@@ -18,7 +18,7 @@ const Cards = tw.div`flex flex-wrap flex-row justify-center sm:max-w-2xl lg:max-
 const Card = tw.div`mt-24 w-full sm:w-1/2 lg:w-1/3 flex flex-col items-center`
 const CardImage = styled.div`
   ${props => css`background-image: url("${props.imageSrc}");`}
-  ${tw`w-64 h-64 bg-contain bg-center rounded`}
+  ${tw`w-64 h-64 bg-contain bg-center rounded-full`}
 `
 const CardContent = styled.div`
   ${tw`flex flex-col items-center mt-6`}
@@ -52,7 +52,7 @@ export default ({
       links: [
         {
           url: "https://twitter.com",
-          icon: TwitterIcon,
+          icon: InstagramIcon,
         },
         {
           url: "https://linkedin.com",
@@ -71,7 +71,7 @@ export default ({
       links: [
         {
           url: "https://twitter.com",
-          icon: TwitterIcon,
+          icon: InstagramIcon,
         },
         {
           url: "https://linkedin.com",
@@ -90,7 +90,7 @@ export default ({
       links: [
         {
           url: "https://twitter.com",
-          icon: TwitterIcon,
+          icon: InstagramIcon,
         },
         {
           url: "https://linkedin.com",
@@ -109,7 +109,7 @@ export default ({
       links: [
         {
           url: "https://twitter.com",
-          icon: TwitterIcon,
+          icon: InstagramIcon,
         },
         {
           url: "https://linkedin.com",
@@ -128,7 +128,7 @@ export default ({
       links: [
         {
           url: "https://twitter.com",
-          icon: TwitterIcon,
+          icon: InstagramIcon,
         },
         {
           url: "https://linkedin.com",
@@ -147,7 +147,7 @@ export default ({
       links: [
         {
           url: "https://twitter.com",
-          icon: TwitterIcon,
+          icon: InstagramIcon,
         },
         {
           url: "https://linkedin.com",

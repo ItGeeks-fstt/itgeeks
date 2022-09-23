@@ -15,7 +15,7 @@ const GlobalStyles = createGlobalStyle(globalStyles, `
      transform: scale(0);
    }
    .activeLink{
-    color:#1864ab;
+    color:rgb(100 21 255 / var(--tw-text-opacity));
 
 
    }

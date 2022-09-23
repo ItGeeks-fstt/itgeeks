@@ -8,13 +8,9 @@ import Footer from "components/footers/FiveColumnWithInputForm.js";
 import MainFeature1 from "components/features/TwoColWithButton.js";
 // import MainFeature2 from "components/features/TwoColSingleFeatureWithStats.js";
 // import MainFeature3 from "components/features/TwoColSingleFeatureWithStats2.js";
-import Features from "components/features/ThreeColSimple.js";
 // import Features from "components/features/ThreeColWithSideImage.js";
 import TeamCardGrid from "components/cards/ProfileThreeColGrid.js";
 
-import SupportIconImage from "images/support-icon.svg";
-import ShieldIconImage from "images/shield-icon.svg";
-import CustomerLoveIconImage from "images/simple-icon.svg";
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
@@ -22,43 +18,25 @@ export default () => {
     <AnimationRevealPage>
       <Header />
       <MainFeature1
-        subheading={<Subheading>About Treact</Subheading>}
-        heading="We are a modern design agency."
+        subheading={<Subheading>About It geeks</Subheading>}
+        heading="We are a modern clup ."
         buttonRounded={false}
         primaryButtonText="See Portfolio"
+        primaryButtonUrl="/"
         imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
+        description="This group is dedicated to the technology enthusiast, and the sharing of ideas and experiences between computer science students in order to create a community."
       />
       <MainFeature1
         subheading={<Subheading>Our Vision</Subheading>}
-        heading="We aim to disrupt the design space."
+        heading="We aim to have an It community ."
         buttonRounded={false}
+        primaryButtonUrl="/contactus"
         primaryButtonText="Contact Us"
         imageSrc="https://images.unsplash.com/3/doctype-hi-res.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=80"
         textOnLeft={false}
+        description="We want to create a social environment where students with various technology experiences come together and share information with one another."
       />
-      <Features
-        subheading={<Subheading>Our Values</Subheading>}
-        heading="We follow these."
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        cards={[
-          {
-            imageSrc: SupportIconImage,
-            title: "24/7 Support",
-            description: "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
-          },
-          {
-            imageSrc: ShieldIconImage,
-            title: "Strong Teams",
-            description: "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
-          },
-          {
-            imageSrc: CustomerLoveIconImage,
-            title: "Customer Satisfaction",
-            description: "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
-          },
-        ]}
-        linkText=""
-      />
+    
       <TeamCardGrid 
         subheading={<Subheading>Our Team</Subheading>}
       />
