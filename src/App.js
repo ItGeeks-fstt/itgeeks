@@ -14,7 +14,7 @@ import PageNotFound from "pages/PageNotFound.js";
 
 
 import SaaSProductLandingPage from "demos/SaaSProductLandingPage";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
