@@ -8,7 +8,7 @@ import FeatureWithSteps from "components/features/TwoColWithSteps.js";
 import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js";
 import FAQ from "components/faqs/SingleCol.js";
 import GetStarted from "components/cta/GetStarted";
-import Footer from "components/footers/FiveColumnWithBackground.js";
+import Footer from "components/footers/MiniCenteredFooter";
 import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
 import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
 import { ReactComponent as Terminal } from "feather-icons/dist/icons/terminal.svg";

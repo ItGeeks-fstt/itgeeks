@@ -19,6 +19,9 @@ const GlobalStyles = createGlobalStyle(globalStyles, `
 
 
    }
+   .hasError{
+    background-color:#e03131!important;
+   }
 `)
 
 export default GlobalStyles

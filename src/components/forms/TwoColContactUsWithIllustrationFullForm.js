@@ -5,6 +5,8 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import EmailIllustrationSrc from "images/email-illustration.svg";
+import { APY_URL } from "config.js";
+import {useRef,useState } from 'react'
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -36,13 +38,55 @@ const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`
 export default ({
   subheading = "Contact Us",
   heading = <>Feel free to <span tw="text-primary-500">get in touch</span><wbr/> with us.</>,
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description = "We promise you with a fast response as soon as possible.",
   submitButtonText = "Send",
   formAction = "#",
   formMethod = "get",
   textOnLeft = true,
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
+  const emailRef=useRef();
+  const fullNameRef=useRef();
+  const subjectRef=useRef();
+  const messageRef=useRef();
+const [isSubmitted,setIsSubmitted]=useState(false);
+const [isWaiting,setisWaiting]=useState(false);
+const [hasError,sethasError]=useState(false);
+  const SubmitHandler=async(e)=>{
+
+  
+    try{
+      e.preventDefault();
+      setisWaiting(true);
+     const data={
+      email:emailRef.current.value,
+      fullName:fullNameRef.current.value,
+      subject:subjectRef.current.value,
+      message:messageRef.current.value}
+
+      const isError=!data.email.trim() || !data.fullName.trim() || !data.subject.trim() || !data.message.trim()
+      sethasError(isError);
+      if(isError)return;
+    
+    
+    await fetch(`${APY_URL}/ContactMessasges.json`,{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data) 
+    }
+    )
+    && setIsSubmitted(true);
+
+  }
+    catch(e){
+alert("Email not Submited, Please check your conction and try again",e)
+    }
+    setisWaiting(false);
+    }
+
+  
 
   return (
     <Container>
@@ -55,12 +99,17 @@ export default ({
             {subheading && <Subheading>{subheading}</Subheading>}
             <Heading>{heading}</Heading>
             {description && <Description>{description}</Description>}
-            <Form action={formAction} method={formMethod}>
-              <Input type="email" name="email" placeholder="Your Email Address" />
-              <Input type="text" name="name" placeholder="Full Name" />
-              <Input type="text" name="subject" placeholder="Subject" />
-              <Textarea name="message" placeholder="Your Message Here" />
-              <SubmitButton type="submit">{submitButtonText}</SubmitButton>
+            <Form onSubmit={SubmitHandler} action={formAction} method={formMethod}>
+              <Input type="email" ref={emailRef} name="email" placeholder="Your Email Address" />
+              <Input type="text" ref={fullNameRef} name="name" placeholder="Full Name" />
+              <Input type="text" ref={subjectRef} name="subject" placeholder="Subject" />
+              <Textarea name="message" ref={messageRef} placeholder="Your Message Here" />
+              <SubmitButton className={hasError ?'hasError':''} type="submit" disabled={isSubmitted}>
+                {isSubmitted && "submited 🎉"}
+                {isWaiting && !hasError && "sendinng...."}
+                {!isSubmitted && !isWaiting && submitButtonText}
+                {hasError && "Please fill all the fields or check your connection"}
+                </SubmitButton>
             </Form>
           </TextContent>
         </TextColumn>
