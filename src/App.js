@@ -14,7 +14,7 @@ import PageNotFound from "pages/PageNotFound.js";
 
 
 import SaaSProductLandingPage from "demos/SaaSProductLandingPage";
-import {  Routes, Route, BrowserRouter } from "react-router-dom";
+import { HashRouter, Routes, Route} from "react-router-dom";
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
@@ -24,14 +24,14 @@ export default function App() {
   return (
     <>
       <GlobalStyles />
-      <BrowserRouter>
-        <Routes>     
-        <Route path="*" element={<PageNotFound />} />    
+      <HashRouter>
+        <Routes>   
+        <Route path="*" element={<PageNotFound />} />               
         <Route path="/" element={<SaaSProductLandingPage />} />
         <Route path="contactus"  element={<ContactUsPage />} />          
         <Route path="aboutus"  element={<AboutUsPage />} />
         </Routes>
-        </BrowserRouter>
+      </HashRouter>  
     </>
   );
 }
