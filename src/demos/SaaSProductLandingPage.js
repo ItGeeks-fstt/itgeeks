@@ -4,12 +4,12 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "components/hero/TwoColumnWithInput.js";
 import Features from "components/features/ThreeColWithSideImage.js";
 import MainFeature2 from "components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
-import FeatureWithSteps from "components/features/TwoColWithSteps.js";
-import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js";
+// import FeatureWithSteps from "components/features/TwoColWithSteps.js";
+// import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js";
 import FAQ from "components/faqs/SingleCol.js";
 import GetStarted from "components/cta/GetStarted";
 import Footer from "components/footers/MiniCenteredFooter";
-import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
+// import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
 import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
 import { ReactComponent as Terminal } from "feather-icons/dist/icons/terminal.svg";
 import { ReactComponent as Team } from "feather-icons/dist/icons/user-check.svg";
@@ -40,8 +40,8 @@ export default () => {
         }
       />
       
-      <MainFeature2 />
-      <FeatureWithSteps
+      {/* <MainFeature2 /> */}
+      {/* <FeatureWithSteps
         subheading={<Subheading>STEPS</Subheading>}
         heading={
           <>
@@ -52,7 +52,7 @@ export default () => {
         imageSrc={macHeroScreenshotImageSrc}
         imageDecoratorBlob={true}
         decoratorBlobCss={tw`xl:w-40 xl:h-40 opacity-15 -translate-x-1/2 left-1/2`}
-      />
+      /> */}
       <MainFeature2
         subheading={<Subheading>VALUES</Subheading>}
         heading={
@@ -87,7 +87,7 @@ export default () => {
         ]}
       />
 
-      <Testimonial
+      {/* <Testimonial
         subheading={<Subheading>Testimonials</Subheading>}
         heading={
           <>
@@ -116,7 +116,7 @@ export default () => {
             customerTitle: "Founder, EventsNYC"
           }
         ]}
-      />
+      /> */}
       <FAQ
         subheading={<Subheading>FAQS</Subheading>}
         heading={

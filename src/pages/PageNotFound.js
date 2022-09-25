@@ -8,6 +8,7 @@ import Header from "components/headers/light.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
 import { SectionHeading } from "components/misc/Headings";
 import {Link} from 'react-router-dom'
+import {links,socialLinks} from "../config/constants/footer/MiniCentredFooterConstants"
 
 const HeadingRow = tw.div`flex`;
 const Heading = tw(SectionHeading)`text-gray-900 mb-10`;
@@ -52,7 +53,10 @@ export default ({ headingText = "Oops Page Not found" }) => {
        
         </ContentWithPaddingXl>
       </Container>
-      <Footer />
+      <Footer 
+       links = {links}
+       socialLinks ={socialLinks}
+      />
     </AnimationRevealPage>
   );
 };
