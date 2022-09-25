@@ -10,6 +10,7 @@ import MainFeature1 from "components/features/TwoColWithButton.js";
 // import MainFeature3 from "components/features/TwoColSingleFeatureWithStats2.js";
 // import Features from "components/features/ThreeColWithSideImage.js";
 import TeamCardGrid from "components/cards/ProfileThreeColGrid.js";
+import {links,socialLinks} from "../config/constants/footer/MiniCentredFooterConstants"
 
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
@@ -40,7 +41,10 @@ export default () => {
       <TeamCardGrid 
         subheading={<Subheading>Our Team</Subheading>}
       />
-      <Footer />
+      <Footer
+      links = {links}
+      socialLinks ={socialLinks}
+       />
     </AnimationRevealPage>
   );
 };

@@ -3,8 +3,6 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import {Container as ContainerBase } from "components/misc/Layouts.js"
 import logo from "../../images/logo.jpg";
-import { ReactComponent as InstagramIcon } from "../../images/instagram.svg";
-import { ReactComponent as GithubIcon } from "../../images/github-icon.svg";
 import { Link } from "react-router-dom";
 
 const Container = tw(ContainerBase)`bg-primary-900 text-gray-100 -mx-8 -mb-8`
@@ -28,7 +26,7 @@ const SocialLink = styled.a`
 `;
 
 const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm text-gray-600`
-export default () => {
+export default ({links,socialLinks}) => {
   return (
     <Container>
       <Content>
@@ -38,17 +36,20 @@ export default () => {
             <LogoText>It Geeks</LogoText>
           </LogoContainer>
           <LinksContainer>
-           <Link to="/"> <Linkspan >Home</Linkspan></Link>
-            <Link to="/aboutus"><Linkspan >About</Linkspan></Link>
-            <Link to="/contactus"><Linkspan >Contact Us</Linkspan></Link>
+              {
+                links.map((link,key )=> {
+                 return <Link key={key} to={link.link}> <Linkspan >{link.name}</Linkspan></Link>
+                })
+              }
           </LinksContainer>
           <SocialLinksContainer>
-            <SocialLink rel="noreferrer"  target="_blank" href="https://www.instagram.com/it_geeks_fstt">
-              <InstagramIcon fill={"white".toString()} />
-            </SocialLink>
-            <SocialLink  rel="noreferrer"  target="_blank" href="https://github.com/sohaibMan">
-              <GithubIcon />
-            </SocialLink>
+          {
+                socialLinks.map((socialLink,key) => {
+                  return  <SocialLink key={key} rel="noreferrer"  target="_blank" href={socialLink.link}>
+                  {socialLink.icon}
+               </SocialLink>
+                })
+              }       
           </SocialLinksContainer>
           <CopyrightText>
             &copy; Copyright 2022, Itgeeks Inc. All Rights Reserved.

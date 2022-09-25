@@ -14,6 +14,7 @@ import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
 import { ReactComponent as Terminal } from "feather-icons/dist/icons/terminal.svg";
 import { ReactComponent as Team } from "feather-icons/dist/icons/user-check.svg";
 import { ReactComponent as Cooperat } from "feather-icons/dist/icons/pocket.svg";
+import {links,socialLinks} from "../config/constants/footer/MiniCentredFooterConstants"
 
 export default () => {
   const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
@@ -139,7 +140,10 @@ export default () => {
         ]}
       />
       <GetStarted/>
-      <Footer />
+      <Footer 
+       links = {links}
+       socialLinks ={socialLinks}
+      />
     </AnimationRevealPage>
   );
 }
