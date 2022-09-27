@@ -20,7 +20,7 @@ export default () => {
       <Header />
       <MainFeature1
         subheading={<Subheading>About It geeks</Subheading>}
-        heading="We are a modern clup ."
+        heading="We are a modern club ."
         buttonRounded={false}
         primaryButtonText="See Portfolio"
         primaryButtonUrl="/"
@@ -38,9 +38,9 @@ export default () => {
         description="We want to create a social environment where students with various technology experiences come together and share information with one another."
       />
     
-      <TeamCardGrid 
+      {/* <TeamCardGrid 
         subheading={<Subheading>Our Team</Subheading>}
-      />
+      /> */}
       <Footer
       links = {links}
       socialLinks ={socialLinks}
