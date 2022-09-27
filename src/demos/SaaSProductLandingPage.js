@@ -32,10 +32,10 @@ export default () => {
         </> }
       roundedHeaderButton={true} />
       <Features
-        subheading={<Subheading>Features</Subheading>}
+        subheading={<Subheading>Teams</Subheading>}
         heading={
           <>
-            We have Amazing <HighlightedText>Service.</HighlightedText>
+            We have Amazing <HighlightedText>Teams.</HighlightedText>
           </>
         }
       />
