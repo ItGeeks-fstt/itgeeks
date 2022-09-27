@@ -6,7 +6,7 @@ import logo from "../../images/logo.jpg";
 import { Link } from "react-router-dom";
 
 const Container = tw(ContainerBase)`bg-primary-900 text-gray-100 -mx-8 -mb-8`
-const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
+const Content = tw.div`max-w-screen-xl mx-auto py-5 lg:py-6`;
 
 const Row = tw.div`flex items-center justify-center flex-col px-8`
 
