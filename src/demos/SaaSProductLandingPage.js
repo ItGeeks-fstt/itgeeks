@@ -127,7 +127,7 @@ export default () => {
         faqs={[
           {
             question: "IT Geeks meaning ?",
-            answer:"IT (Information technology ) is the use of any computers, storage, networking and other physical devices, infrastructure and processes to create process, store, secure and exchange all forms of electronic data "
+            answer:"IT (Information technology ) is the use of any computers, storage, networking and other physical devices, infrastructure and processes to create process, store, secure and exchange all forms of electronic data ,a Geek is a person who discuss computer-related tasks obsessively or with great attention to technical detail."
           },
           {
             question: "Why you should join IT Geeks club ?",

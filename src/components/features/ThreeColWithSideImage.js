@@ -99,7 +99,10 @@ export default ({ cards = null, heading = "Amazing Features", subheading = "Feat
         isMore:false  
       },
   ];
-  const [listCards,setListCards] = useState(defaultCards);
+  if (!cards) {
+    cards = defaultCards
+  }
+  const [listCards,setListCards] = useState(cards);
   // if (!cards) {
   //   cards = defaultCards
   //   setListCards(defaultCards)
