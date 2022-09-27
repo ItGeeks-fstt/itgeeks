@@ -23,7 +23,7 @@ const DecoratorBlobContainer = tw.div`absolute inset-0 overflow-hidden rounded-l
 const DecoratorBlob1 = tw(SvgDecoratorBlob1)`absolute bottom-0 left-0 w-80 h-80 transform -translate-x-20 translate-y-32 text-primary-700 opacity-50`
 const DecoratorBlob2 = tw(SvgDecoratorBlob1)`absolute top-0 right-0 w-80 h-80 transform  translate-x-20 -translate-y-64 text-primary-700 opacity-50`
 export default ({
-  text = "Students from all the Univsity  are happily joining us , So what are you waiting for , Join Us !",
+  text = "Students from all the University are happily joining us , So what are you waiting for , Join Us !",
   primaryLinkText = "Get Started",
   primaryLinkUrl = "https://registration.itgeeks.social",
   secondaryLinkText = "Contact Us",
