@@ -1,8 +1,23 @@
 import { createGlobalStyle } from 'styled-components'
 import  { globalStyles } from 'twin.macro'
 
+
+ 
+
 const GlobalStyles = createGlobalStyle(globalStyles, `
-   /* Below animations are for modal created using React-Modal */
+// cusstom css styles for dark /light mood
+ #light {
+  background-color: #fff;
+}
+ #dark{
+  background-color: #868e96;
+}
+ #dark p{
+color: white;
+}
+
+
+   /* Below animations are for modal created using React-Modal */z
      .ReactModal__Overlay {
      transition: transform 300ms ease-in-out;
      transition-delay: 100ms;

@@ -10,6 +10,7 @@ import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 import logo from "../../images/logo.jpg";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
+import NightModeToggler from "./NightModeToggler/NightModeToggler.js";
 
 const Header = tw.header`
   flex justify-between items-center
@@ -17,7 +18,7 @@ const Header = tw.header`
 `;
 
 
-export const NavLinks = tw.div`inline-block`;
+export const NavLinks = tw.div`inline-block relative`;
 
 /* hocus: stands for "on hover or focus"
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
@@ -33,6 +34,9 @@ ${NavLinkStyle}
 export const NavLinka = tw.a`
 ${NavLinkStyle}
 `;
+export const NavLeft = tw.div`
+flex  items-center gap-4
+`;
 
 export const PrimaryLink = tw(NavLinka)`
   lg:mx-0
@@ -45,7 +49,7 @@ export const LogoLink = styled(LinkChildspan)`
   ${tw`flex items-center font-black border-b-0 text-2xl! ml-0! `};
 
   img {
-    ${tw`w-16 mr-3`}
+    ${tw`w-16 mr-3 rounded-full`}
   }
 `;
 
@@ -80,8 +84,16 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
    */
   const defaultLinks = [
     <NavLinks key={1}>
-    <NavLink className={({ isActive }) => (isActive ? 'activeLink' : '')}  to='/'>
+{/* <NightModeToggler /> //otion b*/}
+
+  <NavLink className={({ isActive }) => (isActive ? 'activeLink' : '')}  to='/'>
+     
         <LinkChildspan >Home</LinkChildspan>
+    </NavLink>
+  
+    <NavLink className={({ isActive }) => (isActive ? 'activeLink' : '')}  to='/'>
+     
+
     </NavLink>
   
 
@@ -99,18 +111,22 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
   
       
     </NavLinks>
+    
   ];
 
   const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler();
   const collapseBreakpointCss = collapseBreakPointCssMap[collapseBreakpointClass];
 
   const defaultLogoLink = (
+    <NavLeft >
     <Link to='/' >
     <LogoLink >
       <img src={logo} alt="logo" />
      IT GEEKS
     </LogoLink>
     </Link>
+    <NightModeToggler /> 
+    </NavLeft>
   );
 
   logoLink = logoLink || defaultLogoLink;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import GlobalStyles from 'styles/GlobalStyles';
 import "./index.css";
 /* Inner Pages */
@@ -15,14 +15,20 @@ import PageNotFound from "pages/PageNotFound.js";
 
 import SaaSProductLandingPage from "demos/SaaSProductLandingPage";
 import { HashRouter, Routes, Route} from "react-router-dom";
+export const ThemeContext = React.createContext(null);
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
-  // return <AnimationRevealPage disabled>xxxxxxxxxx</AnimationRevealPage>;
+  const [theme,setTheme]=useState('light');
+  const togglerTheme=()=>{
+  setTheme(theme==='light'?'dark':'light')
+  console.log('theme',theme);
+}
 
 
   return (
-    <>
+    <div  id={theme}>
+    <ThemeContext.Provider value={{togglerTheme}}>
       <GlobalStyles />
       <HashRouter>
         <Routes>   
@@ -32,7 +38,8 @@ export default function App() {
         <Route path="aboutus"  element={<AboutUsPage />} />
         </Routes>
       </HashRouter>  
-    </>
+    </ThemeContext.Provider>
+    </div>
   );
 }
 
