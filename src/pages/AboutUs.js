@@ -32,7 +32,7 @@ export default () => {
       <Header />
       <MainFeature1
         subheading={<Subheading>About It geeks</Subheading>}
-        heading="We are a modern clup ."
+        heading="We are a modern club ."
         buttonRounded={false}
         primaryButtonText="See Portfolio"
         primaryButtonUrl="/"

@@ -5,6 +5,7 @@ import tw from "twin.macro";
 import { css } from "styled-components/macro";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
+import { useState } from "react";
 
 import defaultCardImage from "images/shield-icon.svg";
 
@@ -20,7 +21,7 @@ import SimpleIconImage from "images/simple-icon.svg";
 const Container = tw.div`relative`;
 
 const ThreeColumnContainer = styled.div`
-  ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-lg mx-auto py-20 md:py-24`}
+  ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-xl mx-auto py-20 md:py-24`}
 `;
 const Subheading = tw(SubheadingBase)`mb-4`;
 const Heading = tw(SectionHeading)`w-full`;
@@ -29,7 +30,7 @@ const Description = tw(SectionDescription)`w-full text-center`;
 const VerticalSpacer = tw.div`mt-10 w-full`
 
 const Column = styled.div`
-  ${tw`md:w-1/2 lg:w-1/3 max-w-sm`}
+  ${tw`md:w-1/2 lg:w-1/4 max-w-sm`}
 `;
 
 const Card = styled.div`
@@ -58,7 +59,8 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
   ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48 `}
 `;
 
-export default ({ cards = null, heading = "Amazing Features", subheading = "Features", description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }) => {
+
+export default ({ cards = null, heading = "Amazing Features", subheading = "Features", description = "" }) => {
   /*
    * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
    *  1) imageSrc - the image shown at the top of the card
@@ -68,19 +70,56 @@ export default ({ cards = null, heading = "Amazing Features", subheading = "Feat
    */
 
   const defaultCards = [
-    {
-      imageSrc: ShieldIconImage,
-      title: "Secure",
-      description: "We strictly only deal with vendors that provide top notch security."
-    },
-    { imageSrc: SupportIconImage, title: "24/7 Support" },
-    { imageSrc: CustomizeIconImage, title: "Customizable" },
-    { imageSrc: ReliableIconImage, title: "Reliable" },
-    { imageSrc: FastIconImage, title: "Fast" },
-    { imageSrc: SimpleIconImage, title: "Easy" }
+    
+    { 
+      imageSrc: SupportIconImage,
+       title: "Formation",
+       description:"Coding is what we do and love. And we want for all students who are interested in computer science to ",
+       more:"understand the concepts and write better code by learning and teaching each other. By choosing this team, you will be helping other students in developing applications, learning programming languages and solving problems… You should know the basic coding languages such as C++ and JavaScript. More over you should know how to write and debug code, as well as having an experience in front-end or back-end software development.",
+       isMore:false
+     },
+    { 
+      imageSrc: CustomizeIconImage,
+       title: "Organization",
+       description:"This team should organize all the events hosted by the club in the most efficient way possible. ",
+       more:" It should manage the event planning process, manage the budget parameters and develop networks with other event organizers so we can collaborate on other events. As a requirement, you should have the ability to work on a team, flexibility, motivation and the sense of responsibility.",
+       isMore:false
+      },
+    { imageSrc: ReliableIconImage,
+       title: "Media",
+       description:"Social media provides a platform for direct communication between coders throughout the world. It can ",
+       more:"be a key driver of content distribution. Our strategy is to create a community of people interested in technology. So this team will be responsible for creating and publishing original content, sharing memories of the club, and promoting our projects in the social media. This will be for sure an opportunity to develop your skills through post-processing and video editing.",
+       isMore:false
+      },
+      {
+        imageSrc: ShieldIconImage,
+        title: "Design",
+        description: "your club will be hosting various activities and events.So you will be working with a team of designers ",
+        more:" in order to achieve a common design goal for the club projects. As well, the team should work on improving and integrating better user feedback into the design process. As a requirement: Creativity, Visual Communication, and a portfolio of illustrations or other graphics will be a plus.",
+        isMore:false  
+      },
   ];
+  if (!cards) {
+    cards = defaultCards
+  }
+  const [listCards,setListCards] = useState(cards);
+  // if (!cards) {
+  //   cards = defaultCards
+  //   setListCards(defaultCards)
+  // }else{
+  //   setListCards(cards)
+  // }
+  function handleIsMore(card)
+ {
+  let tmpCards = listCards;
+  tmpCards.forEach(c=>{
+    if(c.title==card.title){
+      c.isMore = !card.isMore;
+    }
+  })
+  setListCards([...tmpCards])
+  }
 
-  if (!cards) cards = defaultCards;
 
   return (
     <Container>
@@ -89,7 +128,7 @@ export default ({ cards = null, heading = "Amazing Features", subheading = "Feat
         <Heading>{heading}</Heading>
         {description && <Description>{description}</Description>}
         <VerticalSpacer />
-        {cards.map((card, i) => (
+        {listCards.map((card, i) => (
           <Column key={i}>
             <Card>
               <span className="imageContainer">
@@ -98,8 +137,14 @@ export default ({ cards = null, heading = "Amazing Features", subheading = "Feat
               <span className="textContainer">
                 <span className="title">{card.title || "Fully Secure"}</span>
                 <p className="description">
-                  {card.description || "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
+                  {card.description || ""}
+                  {card.isMore?card.more:""}
                 </p>
+               
+                <a className="cursor-pointer text-primary-900 text-lg hover:text-xl hover:text-primary-500" onClick={()=>  handleIsMore(card)}>
+                  {
+                      card.isMore?"show less":"show more"
+                }</a>
               </span>
             </Card>
           </Column>
