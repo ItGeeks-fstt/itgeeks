@@ -21,7 +21,7 @@ import SimpleIconImage from "images/simple-icon.svg";
 const Container = tw.div`relative`;
 
 const ThreeColumnContainer = styled.div`
-  ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-xl mx-auto py-20 md:py-24`}
+  ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-2xl mx-auto py-20 md:py-24`}
 `;
 const Subheading = tw(SubheadingBase)`mb-4`;
 const Heading = tw(SectionHeading)`w-full`;
@@ -115,6 +115,8 @@ export default ({ cards = null, heading = "Amazing Features", subheading = "Feat
   tmpCards.forEach(c=>{
     if(c.title==card.title){
       c.isMore = !card.isMore;
+    }else{
+      c.isMore = false;
     }
   })
   setListCards([...tmpCards])
@@ -131,11 +133,13 @@ export default ({ cards = null, heading = "Amazing Features", subheading = "Feat
         {listCards.map((card, i) => (
           <Column key={i}>
             <Card>
-              <span className="imageContainer">
-                <img src={card.imageSrc || defaultCardImage} alt="" />
-              </span>
+             
               <span className="textContainer">
-                <span className="title">{card.title || "Fully Secure"}</span>
+            
+                <span className="title grid grid-flow-col" >
+                <img className="block" src={card.imageSrc || defaultCardImage} alt="" />
+               <span>{card.title || "Fully Secure"}</span>       
+                </span>
                 <p className="description">
                   {card.description || ""}
                   {card.isMore?card.more:""}
