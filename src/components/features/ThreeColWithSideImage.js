@@ -138,7 +138,7 @@ export default ({ cards = null, heading = "Amazing Features", subheading = "Feat
             
                 <span className="title grid grid-flow-col" >
                 <img className="block" src={card.imageSrc || defaultCardImage} alt="" />
-               <span>{card.title || "Fully Secure"}</span>       
+               <span className="place-self-start" >{card.title || "Fully Secure"}</span>       
                 </span>
                 <p className="description">
                   {card.description || ""}
