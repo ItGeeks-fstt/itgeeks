@@ -93,8 +93,11 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
       <LinkChildspan >About Us</LinkChildspan>
     </NavLink>
 
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} target="_blank" href="https://registration.itgeeks.social">
+    {/* <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} target="_blank" href="https://registration.itgeeks.social">
         registration
+        </PrimaryLink> */}
+      <PrimaryLink  style={{backgroundColor:"gray",cursor:"default"}} onClick={()=>alert("Registration is closed for now")} title="Registration is closed for now" css={roundedHeaderButton && tw`rounded-full`} target="_blank" >
+        Registration
         </PrimaryLink>
   
       

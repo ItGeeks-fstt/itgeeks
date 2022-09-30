@@ -7,7 +7,7 @@ import MainFeature2 from "components/features/TwoColWithTwoHorizontalFeaturesAnd
 // import FeatureWithSteps from "components/features/TwoColWithSteps.js";
 // import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js";
 import FAQ from "components/faqs/SingleCol.js";
-import GetStarted from "components/cta/GetStarted";
+// import GetStarted from "components/cta/GetStarted";
 import Footer from "components/footers/MiniCenteredFooter";
 // import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
 import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
@@ -139,7 +139,7 @@ export default () => {
           },
         ]}
       />
-      <GetStarted/>
+      {/* <GetStarted/> */}
       <Footer 
        links = {links}
        socialLinks ={socialLinks}
