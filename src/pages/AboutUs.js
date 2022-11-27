@@ -10,20 +10,21 @@ import MainFeature1 from "components/features/TwoColWithButton.js";
 // import MainFeature3 from "components/features/TwoColSingleFeatureWithStats2.js";
 // import Features from "components/features/ThreeColWithSideImage.js";
 import TeamCardGrid from "components/blogs/cards/ProfileThreeColGrid.js";
-import {links,socialLinks} from "../config/constants/footer/MiniCentredFooterConstants"
+import {
+  links,
+  socialLinks,
+} from "../config/constants/footer/MiniCentredFooterConstants";
 import { ReactComponent as InstagramIcon } from "images/instagram.svg";
 import { ReactComponent as LinkedinIcon } from "images/linkedin-icon.svg";
 import { ReactComponent as GithubIcon } from "images/github-icon.svg";
 
 // importing the images
-import img1 from 'images/team/G1/img1.jpeg'
-import img2 from 'images/team/G1/img2.jpeg'
-import img3 from 'images/team/G1/img3.jpeg'
-import img4 from 'images/team/G1/img4.jpeg'
-import img5 from 'images/team/G1/img5.jpeg'
-import img6 from 'images/team/G1/img6.jpeg'
-import img7 from 'images/team/G1/img1.jpeg'
-
+import img1 from "images/team/G1/img1.jpeg";
+import img2 from "images/team/G1/img2.jpeg";
+import img3 from "images/team/G1/img3.jpeg";
+import img4 from "images/team/G1/img4.jpeg";
+import img5 from "images/team/G1/img5.jpeg";
+import img6 from "images/team/G1/img6.jpeg";
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
@@ -49,13 +50,12 @@ export default () => {
         textOnLeft={false}
         description="We want to create a social environment where students with various technology experiences come together and share information with one another."
       />
-    
-     
-      <TeamCardGrid 
+
+      <TeamCardGrid
         subheading={<Subheading>Our Team</Subheading>}
-        cards ={[
+        cards={[
           {
-            imageSrc:img5,
+            imageSrc: img5,
             position: "Team leader",
             name: "Manal Zback ",
             links: [
@@ -71,11 +71,10 @@ export default () => {
                 url: "https://github.com/manal-zbakh",
                 icon: GithubIcon,
               },
-             
             ],
           },
           {
-            imageSrc:img1,
+            imageSrc: img1,
             position: "Vice-Team Leader",
             name: "mohammed berbar",
             links: [
@@ -94,26 +93,26 @@ export default () => {
             ],
           },
           {
-            imageSrc:img2,
+            imageSrc: img2,
             position: "Human Resources Manger",
             name: "Nouhaila El Hriki",
             links: [
               {
-                url: "https://twitter.com",
+                url: "https://www.instagram.com/nouhaila__elh/",
                 icon: InstagramIcon,
               },
               {
-                url: "https://linkedin.com",
+                url: "https://www.linkedin.com/in/nouhaila-el-hriki-b401b61bb/",
                 icon: LinkedinIcon,
               },
               {
-                url: "https://github.com",
+                url: "https://github.com/nouhaila-elh",
                 icon: GithubIcon,
               },
             ],
           },
           {
-            imageSrc:img3,
+            imageSrc: img3,
             position: "Communiy Manger",
             name: " Nora Youssefi",
             links: [
@@ -132,7 +131,7 @@ export default () => {
             ],
           },
           {
-            imageSrc:img4,
+            imageSrc: img4,
             position: "Genral Secretary",
             name: "Moaud Barrou",
             links: [
@@ -150,69 +149,30 @@ export default () => {
               },
             ],
           },
-                
+
           {
-            imageSrc:img6,
+            imageSrc: img6,
             position: "Treasuer",
             name: "Nassima El Jazouli",
             links: [
-            {
-              url: "https://www.instagram.com/nassima_eljazouli/",
-              icon: InstagramIcon,
-            },
-            {
-              url: "https://www.linkedin.com/in/nassima-el-jazouli-58547b211/",
-              icon: LinkedinIcon,
-            },
-            {
-              url: " https://github.com/Nassima-el-jazouli",
-              icon: GithubIcon,
-            },
-              
+              {
+                url: "https://www.instagram.com/nassima_eljazouli/",
+                icon: InstagramIcon,
+              },
+              {
+                url: "https://www.linkedin.com/in/nassima-el-jazouli-58547b211/",
+                icon: LinkedinIcon,
+              },
+              {
+                url: " https://github.com/Nassima-el-jazouli",
+                icon: GithubIcon,
+              },
             ],
           },
-         
-         
-          
-         
         ]}
       />
-       <TeamCardGrid 
-        subheading={<Subheading>Our Developers</Subheading>}
-        description=""
-        heading=""
-        cards ={[
-
-          
-         
-          {
-            imageSrc:img7,
-            position: "Web Site Manger",
-            name: "Sohaib Manah ",
-            links: [
-            {
-              url: "https://www.instagram.com/so_haib_mh/",
-              icon: InstagramIcon,
-            },
-            {
-              url: "https://www.linkedin.com/in/sohaibe-sohaib-022725204/",
-              icon: LinkedinIcon,
-            },
-            {
-              url: " https://github.com/SohaibMan",
-              icon: GithubIcon,
-            },
-              
-            ],
-          },
-          
-         
-        ]}
-      />
-      <Footer
-      links = {links}
-      socialLinks ={socialLinks}
-       />
+     
+           <Footer links={links} socialLinks={socialLinks} />
     </AnimationRevealPage>
   );
 };

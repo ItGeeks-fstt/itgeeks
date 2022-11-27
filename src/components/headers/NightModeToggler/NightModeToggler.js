@@ -11,7 +11,7 @@ function NightModeToggler() {
 
 
     <label className={styles['switch']}>
-    <input onChange={ctx.togglerTheme} type="checkbox"/>
+    <input checked={ctx.theme==='dark'?true:false} onChange={ctx.togglerTheme} type="checkbox"/>
     <span className={styles['slider']}  ></span>
     </label>
      
