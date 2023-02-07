@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import {Link,NavLink} from 'react-router-dom'
+import { Link, NavLink } from "react-router-dom";
 
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
@@ -16,16 +16,15 @@ const Header = tw.header`
   max-w-screen-xl mx-auto
 `;
 
-
 export const NavLinks = tw.div`inline-block`;
 
 /* hocus: stands for "on hover or focus"
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
  */
 
-const NavLinkStyle=` text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
+const NavLinkStyle = ` text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
 font-semibold tracking-wide transition duration-300
-pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500`
+pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500`;
 
 export const LinkChildspan = tw.span`
 ${NavLinkStyle}
@@ -64,7 +63,13 @@ export const DesktopNavLinks = tw.nav`
   hidden lg:flex flex-1 justify-between items-center
 `;
 
-export default ({ roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" }) => {
+export default ({
+  roundedHeaderButton = false,
+  logoLink,
+  links,
+  className,
+  collapseBreakpointClass = "lg",
+}) => {
   /*
    * This header component accepts an optionals "links" prop that specifies the links to render in the navbar.
    * This links props should be an array of "NavLinks" components which is exported from this file.
@@ -80,39 +85,50 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
    */
   const defaultLinks = [
     <NavLinks key={1}>
-    <NavLink className={({ isActive }) => (isActive ? 'activeLink' : '')}  to='/'>
-        <LinkChildspan >Home</LinkChildspan>
-    </NavLink>
-  
+      <NavLink
+        className={({ isActive }) => (isActive ? "activeLink" : "")}
+        to="/"
+      >
+        <LinkChildspan>Home</LinkChildspan>
+      </NavLink>
 
-    <NavLink className={({ isActive }) => (isActive ?  'activeLink' : '')} to='/contactus'>
-      <LinkChildspan >Contact Us</LinkChildspan>
-    </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "activeLink" : "")}
+        to="/contactus"
+      >
+        <LinkChildspan>Contact Us</LinkChildspan>
+      </NavLink>
 
-    <NavLink className={({ isActive }) => (isActive ?  'activeLink': '')} to='/aboutus'>
-      <LinkChildspan >About Us</LinkChildspan>
-    </NavLink>
-
-    {/* <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} target="_blank" href="https://registration.itgeeks.social">
+      <NavLink
+        className={({ isActive }) => (isActive ? "activeLink" : "")}
+        to="/aboutus"
+      >
+        <LinkChildspan>About Us</LinkChildspan>
+      </NavLink>
+      {/* toogle this twice to enable/disable registarion button */}
+      <PrimaryLink
+        css={roundedHeaderButton && tw`rounded-full`}
+        target="_blank"
+        href="https://registration.itgeeks.social"
+      >
         registration
-        </PrimaryLink> */}
-      <PrimaryLink  style={{backgroundColor:"gray",cursor:"default"}} onClick={()=>alert("Registration is closed for now")} title="Registration is closed for now" css={roundedHeaderButton && tw`rounded-full`} target="_blank" >
+      </PrimaryLink>
+      {/* <PrimaryLink  style={{backgroundColor:"gray",cursor:"default"}} onClick={()=>alert("Registration is closed for now")} title="Registration is closed for now" css={roundedHeaderButton && tw`rounded-full`} target="_blank" >
         Registration
-        </PrimaryLink>
-  
-      
-    </NavLinks>
+        </PrimaryLink> */}
+    </NavLinks>,
   ];
 
   const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler();
-  const collapseBreakpointCss = collapseBreakPointCssMap[collapseBreakpointClass];
+  const collapseBreakpointCss =
+    collapseBreakPointCssMap[collapseBreakpointClass];
 
   const defaultLogoLink = (
-    <Link to='/' >
-    <LogoLink >
-      <img src={logo} alt="logo" />
-     IT GEEKS
-    </LogoLink>
+    <Link to="/">
+      <LogoLink>
+        <img src={logo} alt="logo" />
+        IT GEEKS
+      </LogoLink>
     </Link>
   );
 
@@ -126,13 +142,26 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
         {links}
       </DesktopNavLinks>
 
-      <MobileNavLinksContainer css={collapseBreakpointCss.mobileNavLinksContainer}>
+      <MobileNavLinksContainer
+        css={collapseBreakpointCss.mobileNavLinksContainer}
+      >
         {logoLink}
-        <MobileNavLinks initial={{ x: "150%", display: "none" }} animate={animation} css={collapseBreakpointCss.mobileNavLinks}>
+        <MobileNavLinks
+          initial={{ x: "150%", display: "none" }}
+          animate={animation}
+          css={collapseBreakpointCss.mobileNavLinks}
+        >
           {links}
         </MobileNavLinks>
-        <NavToggle onClick={toggleNavbar} className={showNavLinks ? "open" : "closed"}>
-          {showNavLinks ? <CloseIcon tw="w-6 h-6" /> : <MenuIcon tw="w-6 h-6" />}
+        <NavToggle
+          onClick={toggleNavbar}
+          className={showNavLinks ? "open" : "closed"}
+        >
+          {showNavLinks ? (
+            <CloseIcon tw="w-6 h-6" />
+          ) : (
+            <MenuIcon tw="w-6 h-6" />
+          )}
         </NavToggle>
       </MobileNavLinksContainer>
     </Header>
@@ -149,21 +178,21 @@ const collapseBreakPointCssMap = {
   sm: {
     mobileNavLinks: tw`sm:hidden`,
     desktopNavLinks: tw`sm:flex`,
-    mobileNavLinksContainer: tw`sm:hidden`
+    mobileNavLinksContainer: tw`sm:hidden`,
   },
   md: {
     mobileNavLinks: tw`md:hidden`,
     desktopNavLinks: tw`md:flex`,
-    mobileNavLinksContainer: tw`md:hidden`
+    mobileNavLinksContainer: tw`md:hidden`,
   },
   lg: {
     mobileNavLinks: tw`lg:hidden`,
     desktopNavLinks: tw`lg:flex`,
-    mobileNavLinksContainer: tw`lg:hidden`
+    mobileNavLinksContainer: tw`lg:hidden`,
   },
   xl: {
     mobileNavLinks: tw`lg:hidden`,
     desktopNavLinks: tw`lg:flex`,
-    mobileNavLinksContainer: tw`lg:hidden`
-  }
+    mobileNavLinksContainer: tw`lg:hidden`,
+  },
 };
