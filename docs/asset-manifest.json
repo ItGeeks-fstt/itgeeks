@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.714dc315.css",
+    "main.js": "/static/js/main.ca142ca7.js",
+    "static/media/design-illustration-2.svg": "/static/media/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg",
+    "static/media/email-illustration.svg": "/static/media/email-illustration.84fb82b841c197337a4bc2c1e660d5a0.svg",
+    "static/media/prototype-illustration.svg": "/static/media/prototype-illustration.21bc4b3f612a2f257c3d361067582485.svg",
+    "static/media/team-illustration-2.svg": "/static/media/team-illustration-2.76aa0427e037826d4453f8791ee544e3.svg",
+    "static/media/dot-pattern.svg": "/static/media/dot-pattern.ee6f4f0e6654d6e38850896165f9dc36.svg",
+    "static/media/logo.jpg": "/static/media/logo.7633c763152e5f7d7002.jpg",
+    "index.html": "/index.html",
+    "static/media/github-icon.svg": "/static/media/github-icon.2012dbb259c77fd6aea5e21004ac0818.svg",
+    "static/media/instagram.svg": "/static/media/instagram.359d7d3f391888ab26c855bd50b5e657.svg",
+    "static/media/svg-decorator-blob-3.svg": "/static/media/svg-decorator-blob-3.de3cee31b9fcddf16b65056335c6f8e0.svg",
+    "static/media/support-icon.svg": "/static/media/support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg",
+    "static/media/simple-icon.svg": "/static/media/simple-icon.673b7e1750b2a4ef32907fc164828d00.svg",
+    "static/media/customize-icon.svg": "/static/media/customize-icon.367468c90fd796009b97fbfba67b2c6a.svg",
+    "static/media/svg-decorator-blob-1.svg": "/static/media/svg-decorator-blob-1.882b52f533a5f881fbac3178df042bb0.svg",
+    "static/media/shield-icon.svg": "/static/media/shield-icon.daefe14b320b14fbd9cbd18908ac93ec.svg",
+    "static/media/svg-decorator-blob-8.svg": "/static/media/svg-decorator-blob-8.46d53f6b637ec792eff69fa98170e560.svg",
+    "static/media/svg-decorator-blob-7.svg": "/static/media/svg-decorator-blob-7.04fa60c9416090a003233f93c9de14b1.svg",
+    "static/media/user-check.svg": "/static/media/user-check.119953392d1d73762c71c5e15205a601.svg",
+    "static/media/pocket.svg": "/static/media/pocket.b99de34a551a968511398dc4d8ee3b52.svg",
+    "static/media/menu.svg": "/static/media/menu.644fa295fdd5f662e642ba6bfb084239.svg",
+    "static/media/briefcase.svg": "/static/media/briefcase.21248a068c385cec74542746ea8c5e8c.svg",
+    "static/media/dollar-sign.svg": "/static/media/dollar-sign.8d9a6f938731fde21207ac6851ae5fcb.svg",
+    "static/media/reliable-icon.svg": "/static/media/reliable-icon.1367510a8f0a1bec76dc425d25f92f43.svg",
+    "static/media/terminal.svg": "/static/media/terminal.62314645ceb01c471ab4fcc6d5137b5d.svg",
+    "static/media/x.svg": "/static/media/x.6c9a4ba71a333be7b021fc6da39d864c.svg",
+    "static/media/chevron-down.svg": "/static/media/chevron-down.c3e123cf78bc368a192f3e2dee97daba.svg",
+    "static/media/fast-icon.svg": "/static/media/fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg",
+    "static/media/linkedin-icon.svg": "/static/media/linkedin-icon.962df6cec61e5366889690a28a03b953.svg",
+    "static/media/facebook-icon.svg": "/static/media/facebook-icon.8f6512c4ee4f21763666f0f3b69d970d.svg",
+    "main.714dc315.css.map": "/static/css/main.714dc315.css.map",
+    "main.ca142ca7.js.map": "/static/js/main.ca142ca7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.714dc315.css",
+    "static/js/main.ca142ca7.js"
+  ]
+}
