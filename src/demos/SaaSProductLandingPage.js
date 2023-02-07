@@ -17,13 +17,13 @@ import { ReactComponent as Cooperat } from "feather-icons/dist/icons/pocket.svg"
 import {links,socialLinks} from "../config/constants/footer/MiniCentredFooterConstants"
 
 export default () => {
-  const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
-  const HighlightedText = tw.span`text-primary-500`;
+  const Subheading = tw.span`uppercase tracking-widest font-bold text-blue-500`;
+  const HighlightedText = tw.span`text-blue-500`;
 
   return (
     <AnimationRevealPage>
       <Hero 
-      title ={<span>IT Geeks do better than rest <span className="text-primary-500">put us to test </span></span>}
+      title ={<span>IT Geeks do better than rest <span className="text-blue-500">put us to test </span></span>}
       content = {<>Welcome to IT Geeks Club 
         <br></br>
         IT Geeks is an approved club of the faculty of science and technology – tangier . Founded in 2022  by six founding meembers.

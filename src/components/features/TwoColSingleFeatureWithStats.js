@@ -24,7 +24,7 @@ const Description = tw.p`text-center md:text-left text-sm md:text-base lg:text-l
 
 const Statistics = tw.div`mt-6 lg:mt-8 xl:mt-16 flex flex-wrap`
 const Statistic = tw.div`text-lg sm:text-2xl lg:text-3xl w-1/2 mt-4 lg:mt-10 text-center md:text-left`
-const Value = tw.div`font-bold text-primary-500`
+const Value = tw.div`font-bold text-blue-500`
 const Key = tw.div`font-medium text-gray-700`
 
 export default ({textOnLeft = false}) => {

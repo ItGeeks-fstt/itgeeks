@@ -62,7 +62,7 @@ const Controls = styled.div`
   }
 `;
 const ControlButton = styled.button`
-  ${tw`mx-3 p-4 rounded-full transition duration-300 bg-gray-200 hover:bg-gray-300 text-primary-500 hover:text-primary-700 focus:outline-none focus:shadow-outline`}
+  ${tw`mx-3 p-4 rounded-full transition duration-300 bg-gray-200 hover:bg-gray-300 text-blue-500 hover:text-primary-700 focus:outline-none focus:shadow-outline`}
   svg {
     ${tw`w-4 h-4 stroke-3`}
   }

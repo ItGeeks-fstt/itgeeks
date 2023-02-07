@@ -42,7 +42,7 @@ const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
   ${tw`pointer-events-none opacity-5 absolute left-0 bottom-0 h-64 w-64 transform -translate-x-2/3  -z-10`}
 `;
 const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
-  ${tw`pointer-events-none fill-current text-primary-500 opacity-25 absolute w-32 h-32 right-0 bottom-0 transform translate-x-10 translate-y-10 -z-10`}
+  ${tw`pointer-events-none fill-current text-blue-500 opacity-25 absolute w-32 h-32 right-0 bottom-0 transform translate-x-10 translate-y-10 -z-10`}
 `;
 
 const StyledModal = styled(ReactModalAdapter)`
@@ -56,7 +56,7 @@ const StyledModal = styled(ReactModalAdapter)`
     ${tw`w-full lg:p-16`}
   }
 `;
-const CloseModalButton = tw.button`absolute top-0 right-0 mt-8 mr-8 hocus:text-primary-500`;
+const CloseModalButton = tw.button`absolute top-0 right-0 mt-8 mr-8 hocus:text-blue-500`;
 
 export default ({
   heading = "Modern React Templates, Just For You",

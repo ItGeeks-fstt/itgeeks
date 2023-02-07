@@ -145,7 +145,7 @@ export default ({ cards = null, heading = "Amazing Features", subheading = "Feat
                   {card.isMore?card.more:""}
                 </p>
                
-                <a className="cursor-pointer text-primary-900 text-lg hover:text-xl hover:text-primary-500" onClick={()=>  handleIsMore(card)}>
+                <a className="cursor-pointer text-primary-900 text-lg hover:text-xl hover:text-blue-500" onClick={()=>  handleIsMore(card)}>
                   {
                       card.isMore?"show less":"show more"
                 }</a>

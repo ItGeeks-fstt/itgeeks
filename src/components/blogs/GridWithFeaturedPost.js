@@ -19,7 +19,7 @@ const PostImage = styled.div`
   ${tw`h-64 sm:h-80 bg-center bg-cover rounded-t`}
 `;
 const PostText = tw.div`flex-1 px-6 py-8` 
-const PostTitle = tw.h6`font-bold group-hocus:text-primary-500 transition duration-300 `;
+const PostTitle = tw.h6`font-bold group-hocus:text-blue-500 transition duration-300 `;
 const PostDescription = tw.p``;
 const AuthorInfo = tw.div`flex`;
 const AuthorImage = tw.img`w-12 h-12 rounded-full mr-3`;

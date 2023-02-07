@@ -43,7 +43,7 @@ background: linear-gradient(135deg, rgba(76,81,191,1) 0%, rgba(102,126,234,1) 10
         ${tw`text-gray-300!`}
       }
       ${BuyNowButton} {
-        ${tw`bg-gray-100 text-primary-500 hocus:bg-gray-300 hocus:text-primary-800`}
+        ${tw`bg-gray-100 text-blue-500 hocus:bg-gray-300 hocus:text-primary-800`}
     `}
 `;
 

@@ -7,7 +7,7 @@ import {Link,NavLink} from 'react-router-dom'
 
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
-import logo from "../../images/logo.jpg";
+import logo from "../../images/logo.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
@@ -25,7 +25,7 @@ export const NavLinks = tw.div`inline-block`;
 
 const NavLinkStyle=` text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
 font-semibold tracking-wide transition duration-300
-pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500`
+pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-blue-500`
 
 export const LinkChildspan = tw.span`
 ${NavLinkStyle}
@@ -45,13 +45,13 @@ export const LogoLink = styled(LinkChildspan)`
   ${tw`flex items-center font-black border-b-0 text-2xl! ml-0! `};
 
   img {
-    ${tw`w-16 mr-3`}
+    ${tw`w-32 mr-3`}
   }
 `;
 
 export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`;
 export const NavToggle = tw.button`
-  lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
+  lg:hidden z-20 focus:outline-none hocus:text-blue-500 transition duration-300
 `;
 export const MobileNavLinks = motion(styled.div`
   ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}
@@ -93,12 +93,12 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
       <LinkChildspan >About Us</LinkChildspan>
     </NavLink>
 
-    {/* <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} target="_blank" href="https://registration.itgeeks.social">
+    <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} target="_blank" href="https://registration.itgeeks.social">
         registration
-        </PrimaryLink> */}
-      <PrimaryLink  style={{backgroundColor:"gray",cursor:"default"}} onClick={()=>alert("Registration is closed for now")} title="Registration is closed for now" css={roundedHeaderButton && tw`rounded-full`} target="_blank" >
-        Registration
         </PrimaryLink>
+      {/* <PrimaryLink  style={{backgroundColor:"gray",cursor:"default"}} onClick={()=>alert("Registration is closed for now")} title="Registration is closed for now" css={roundedHeaderButton && tw`rounded-full`} target="_blank" >
+        Registration
+        </PrimaryLink> */}
   
       
     </NavLinks>
@@ -111,7 +111,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
     <Link to='/' >
     <LogoLink >
       <img src={logo} alt="logo" />
-     IT GEEKS
+     {/* IT GEEKS */}
     </LogoLink>
     </Link>
   );

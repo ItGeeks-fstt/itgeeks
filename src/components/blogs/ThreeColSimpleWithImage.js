@@ -20,7 +20,7 @@ const Image = styled.div(props => [
 ]);
 const Category = tw.div`mt-4 text-secondary-100 font-bold text-sm`;
 const Title = tw.h4`mt-2 leading-relaxed font-bold text-lg`;
-const Link = tw.a`inline-block mt-2 text-sm text-primary-500 font-bold cursor-pointer transition duration-300 border-b-2 border-transparent hover:border-primary-500`;
+const Link = tw.a`inline-block mt-2 text-sm text-blue-500 font-bold cursor-pointer transition duration-300 border-b-2 border-transparent hover:border-primary-500`;
 
 const DecoratorBlob1 = tw(
   SvgDecoratorBlob1

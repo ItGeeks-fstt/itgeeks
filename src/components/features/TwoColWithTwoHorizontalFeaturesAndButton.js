@@ -26,7 +26,7 @@ const Image = styled.img(props => [
 
 const DecoratorBlob = tw(
   SvgDotPattern
-)`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10`;
+)`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-blue-500 -z-10`;
 
 const TextContent = tw.div`lg:py-8 text-center md:text-left`;
 
@@ -41,7 +41,7 @@ const Feature = tw.div`mt-10 lg:mt-8 flex items-center md:items-start flex-col m
 
 const FeatureHeadingContainer = tw.div`flex items-center`;
 const FeatureIconContainer = styled.div`
-  ${tw`mx-auto inline-block border border-primary-500 text-primary-500 text-center rounded p-2 flex-shrink-0`}
+  ${tw`mx-auto inline-block border border-primary-500 text-blue-500 text-center rounded p-2 flex-shrink-0`}
   ${props => [
     props.iconRoundedFull && tw`rounded-full`,
     props.iconFilled && tw`border-0 bg-primary-500 text-gray-100`
@@ -63,7 +63,7 @@ export default ({
   subheading = "Our Expertise",
   heading = (
     <>
-      Designed & Developed by <span tw="text-primary-500">Professionals.</span>
+      Designed & Developed by <span tw="text-blue-500">Professionals.</span>
     </>
   ),
   description = "",
