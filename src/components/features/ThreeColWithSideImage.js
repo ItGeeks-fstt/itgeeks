@@ -14,9 +14,9 @@ import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3
 import SupportIconImage from "images/support-icon.svg";
 import ShieldIconImage from "images/shield-icon.svg";
 import CustomizeIconImage from "images/customize-icon.svg";
-import FastIconImage from "images/fast-icon.svg";
+// import FastIconImage from "images/fast-icon.svg";
 import ReliableIconImage from "images/reliable-icon.svg";
-import SimpleIconImage from "images/simple-icon.svg";
+// import SimpleIconImage from "images/simple-icon.svg";
 
 const Container = tw.div`relative`;
 
@@ -113,7 +113,7 @@ export default ({ cards = null, heading = "Amazing Features", subheading = "Feat
  {
   let tmpCards = listCards;
   tmpCards.forEach(c=>{
-    if(c.title==card.title){
+    if(c.title===card.title){
       c.isMore = !card.isMore;
     }else{
       c.isMore = false;
