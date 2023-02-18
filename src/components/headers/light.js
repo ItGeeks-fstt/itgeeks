@@ -106,16 +106,22 @@ export default ({
         <LinkChildspan>About Us</LinkChildspan>
       </NavLink>
       {/* toogle this twice to enable/disable registarion button */}
-      <PrimaryLink
+      {/* <PrimaryLink
         css={roundedHeaderButton && tw`rounded-full`}
         target="_blank"
         href="https://registration.itgeeks.social"
       >
         registration
-      </PrimaryLink>
-      {/* <PrimaryLink  style={{backgroundColor:"gray",cursor:"default"}} onClick={()=>alert("Registration is closed for now")} title="Registration is closed for now" css={roundedHeaderButton && tw`rounded-full`} target="_blank" >
+      </PrimaryLink> */}
+      <PrimaryLink
+        style={{ backgroundColor: "gray", cursor: "default" }}
+        onClick={() => alert("Registration is closed for now")}
+        title="Registration is closed for now"
+        css={roundedHeaderButton && tw`rounded-full`}
+        target="_blank"
+      >
         Registration
-        </PrimaryLink> */}
+      </PrimaryLink>
     </NavLinks>,
   ];
 
