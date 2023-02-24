@@ -15,7 +15,7 @@
     "react-modal": "^3.15.0",
     "react-rnd": "^10.3.7",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.5",
@@ -29,7 +29,6 @@
     "eject": "react-scripts eject",
     "deploy": "yarn build && netlify deploy --prod --dir=build",
     "postbuild": "(rmdir /s /q docs && ren build docs) || ( rm -r docs && mv -T build docs)"
-    
   },
   "eslintConfig": {
     "extends": "react-app",
@@ -55,5 +54,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.3"
   }
 }
