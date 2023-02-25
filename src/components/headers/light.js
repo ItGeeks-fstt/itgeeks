@@ -113,7 +113,7 @@ export default ({
       >
         registration
       </PrimaryLink>
-      {/* <PrimaryLink
+      <PrimaryLink
         style={{ backgroundColor: "gray", cursor: "default" }}
         onClick={() => alert("Registration is closed for now")}
         title="Registration is closed for now"
@@ -121,7 +121,7 @@ export default ({
         target="_blank"
       >
         Registration
-      </PrimaryLink> */}
+      </PrimaryLink>
     </NavLinks>,
   ];
 
