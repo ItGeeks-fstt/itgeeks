@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2d6e9103.css",
-    "main.js": "/static/js/main.8990c737.js",
+    "main.css": "/static/css/main.4d3f5134.css",
+    "main.js": "/static/js/main.41b752f0.js",
     "static/media/design-illustration-2.svg": "/static/media/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg",
     "static/media/logo.png": "/static/media/logo.b079c256dd048c0554f0.png",
     "static/media/email-illustration.svg": "/static/media/email-illustration.84fb82b841c197337a4bc2c1e660d5a0.svg",
@@ -29,11 +29,11 @@
     "static/media/chevron-down.svg": "/static/media/chevron-down.c3e123cf78bc368a192f3e2dee97daba.svg",
     "static/media/linkedin-icon.svg": "/static/media/linkedin-icon.962df6cec61e5366889690a28a03b953.svg",
     "static/media/facebook-icon.svg": "/static/media/facebook-icon.8f6512c4ee4f21763666f0f3b69d970d.svg",
-    "main.2d6e9103.css.map": "/static/css/main.2d6e9103.css.map",
-    "main.8990c737.js.map": "/static/js/main.8990c737.js.map"
+    "main.4d3f5134.css.map": "/static/css/main.4d3f5134.css.map",
+    "main.41b752f0.js.map": "/static/js/main.41b752f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d6e9103.css",
-    "static/js/main.8990c737.js"
+    "static/css/main.4d3f5134.css",
+    "static/js/main.41b752f0.js"
   ]
 }
