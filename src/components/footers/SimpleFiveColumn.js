@@ -18,11 +18,11 @@ const ColumnHeading = tw.h5`font-bold`;
 
 const LinkList = tw.ul`mt-4 text-sm font-medium`;
 const LinkListItem = tw.li`mt-3`;
-const Link = tw.a`border-b-2 border-transparent hocus:text-primary-500 hocus:border-primary-500 pb-1 transition duration-300`;
+const Link = tw.a`border-b-2 border-transparent hocus:text-blue-500 hocus:border-primary-500 pb-1 transition duration-300`;
 
 const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
 const LogoImg = tw.img`w-8`;
-const LogoText = tw.h5`ml-2 text-xl font-black text-primary-500`;
+const LogoText = tw.h5`ml-2 text-xl font-black text-blue-500`;
 
 const CompanyDescription = tw.p`mt-4 max-w-xs font-medium text-sm mx-auto md:mx-0 md:mr-4 `;
 

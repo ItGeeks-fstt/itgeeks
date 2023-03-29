@@ -16,7 +16,7 @@ const Image = styled(motion.div)(props => [
   `background-image: url("${props.$imageSrc}");`,
   tw`h-64 bg-cover bg-center rounded`
 ]);
-const Title = tw.h5`mt-6 text-xl font-bold transition duration-300 group-hover:text-primary-500`;
+const Title = tw.h5`mt-6 text-xl font-bold transition duration-300 group-hover:text-blue-500`;
 const Description = tw.p`mt-2 font-medium text-secondary-100 leading-loose text-sm`;
 const AuthorInfo = tw.div`mt-6 flex items-center`;
 const AuthorImage = tw.img`w-12 h-12 rounded-full`;

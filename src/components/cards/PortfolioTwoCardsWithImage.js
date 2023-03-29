@@ -39,7 +39,7 @@ const CardImage = styled.div(props => [
 const CardText = tw.div`mt-4`;
 
 const CardHeader = tw.div`flex justify-between items-center`;
-const CardCompany = tw.div`text-primary-500 font-bold text-lg`;
+const CardCompany = tw.div`text-blue-500 font-bold text-lg`;
 const CardType = tw.div`font-semibold text-sm text-gray-600`;
 
 const CardTitle = tw.h5`text-xl mt-4 font-bold`;
@@ -60,7 +60,7 @@ export default ({
   subheading = "Our Portfolio",
   headingHtmlComponent = (
     <>
-      We've done some <span tw="text-primary-500">amazing projects.</span>
+      We've done some <span tw="text-blue-500">amazing projects.</span>
     </>
   ),
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.",

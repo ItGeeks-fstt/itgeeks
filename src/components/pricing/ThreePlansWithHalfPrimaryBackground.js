@@ -53,7 +53,7 @@ const PlanFeatures = styled.ul`
   .feature {
     ${tw`flex items-start mt-6 first:mt-0`}
     .icon {
-      ${tw`w-6 h-6 text-primary-500 flex-shrink-0`}
+      ${tw`w-6 h-6 text-blue-500 flex-shrink-0`}
     }
     .text {
       ${tw`font-semibold text-primary-900 tracking-wide ml-3`}
