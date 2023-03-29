@@ -14,23 +14,39 @@ import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
 import { ReactComponent as Terminal } from "feather-icons/dist/icons/terminal.svg";
 import { ReactComponent as Team } from "feather-icons/dist/icons/user-check.svg";
 import { ReactComponent as Cooperat } from "feather-icons/dist/icons/pocket.svg";
-import {links,socialLinks} from "../config/constants/footer/MiniCentredFooterConstants"
+import {
+  links,
+  socialLinks,
+} from "../config/constants/footer/MiniCentredFooterConstants";
 
 export default () => {
-  const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
-  const HighlightedText = tw.span`text-primary-500`;
+  const Subheading = tw.span`uppercase tracking-widest font-bold text-blue-500`;
+  const HighlightedText = tw.span`text-blue-500`;
 
   return (
     <AnimationRevealPage>
-      <Hero 
-      title ={<span>IT Geeks do better than rest <span className="text-primary-500">put us to test </span></span>}
-      content = {<>Welcome to IT Geeks Club 
-        <br></br>
-        IT Geeks is an approved club of the faculty of science and technology – tangier . Founded in 2022  by six founding meembers.
-        <br></br>
-        So are you passionate about technology ? do you code ? do you design ? are you a debugger ? If you answered ‘yes ‘ to any of these questions and you want to learn more, join us now and don’t miss the chance.
-        </> }
-      roundedHeaderButton={true} />
+      <Hero
+        title={
+          <span>
+            IT Geeks do better than the rest{" "}
+            <span className="text-blue-500">and put us to the test </span>
+          </span>
+        }
+        content={
+          <>
+            Welcome to IT Geeks Club
+            <br></br>
+            IT Geeks is an approved club of the faculty of science and
+            technology – tangier . Founded in 2022 by six founding meembers.
+            <br></br>
+            So are you passionate about technology ? do you code ? do you
+            design ? are you a debugger ? If you answered ‘yes ‘ to any of these
+            questions and you want to learn more, join us now and don’t miss the
+            chance.
+          </>
+        }
+        roundedHeaderButton={true}
+      />
       <Features
         subheading={<Subheading>Teams</Subheading>}
         heading={
@@ -39,7 +55,7 @@ export default () => {
           </>
         }
       />
-      
+
       {/* <MainFeature2 /> */}
       {/* <FeatureWithSteps
         subheading={<Subheading>STEPS</Subheading>}
@@ -57,32 +73,33 @@ export default () => {
         subheading={<Subheading>VALUES</Subheading>}
         heading={
           <>
-            We Always Abide by Our <HighlightedText>Principles.</HighlightedText>
+            We Always Abide by Our{" "}
+            <HighlightedText>Principles.</HighlightedText>
           </>
         }
         imageSrc={prototypeIllustrationImageSrc}
         showDecoratorBlob={false}
         features={[
-       
-    
           {
             Icon: Cooperat,
             title: "Cooperat",
             description: "We promise to offer you the best knowledge we can .",
-            iconContainerCss: tw`bg-green-300 text-green-800`
+            iconContainerCss: tw`bg-green-300 text-green-800`,
           },
-          
+
           {
             Icon: Team,
             title: "Professionalism",
-            description: "	We are a social environment where people with various technology experiences come together and share informations with one another.",
-            iconContainerCss: tw`bg-red-300 text-red-800`
+            description:
+              "	We are a social environment where people with various technology experiences come together and share informations with one another.",
+            iconContainerCss: tw`bg-red-300 text-red-800`,
           },
           {
             Icon: Terminal,
             title: "geeks ",
-            description: "	We believe in the power of the computer science community.",
-            iconContainerCss: tw`bg-green-300 text-green-800`
+            description:
+              "	We believe in the power of the computer science community.",
+            iconContainerCss: tw`bg-green-300 text-green-800`,
           },
         ]}
       />
@@ -127,23 +144,23 @@ export default () => {
         faqs={[
           {
             question: "IT Geeks meaning ?",
-            answer:"IT (Information technology ) is the use of any computers, storage, networking and other physical devices, infrastructure and processes to create process, store, secure and exchange all forms of electronic data ,a Geek is a person who discuss computer-related tasks obsessively or with great attention to technical detail."
+            answer:
+              "IT (Information technology ) is the use of any computers, storage, networking and other physical devices, infrastructure and processes to create process, store, secure and exchange all forms of electronic data ,a Geek is a person who discuss computer-related tasks obsessively or with great attention to technical detail.",
           },
           {
             question: "Why you should join IT Geeks club ?",
-            answer:"Our club is the perfect place to grow your network and meet new people with different skills and experiences in differents IT domains (backend developement ,frontend developement , IA … ) You'll as well gain knowledge, skills and experiences in leadership,presentation, communication and problem-solving." 
+            answer:
+              "Our club is the perfect place to grow your network and meet new people with different skills and experiences in differents IT domains (backend developement ,frontend developement , IA … ) You'll as well gain knowledge, skills and experiences in leadership,presentation, communication and problem-solving.",
           },
           {
             question: "What are club activities ?",
-            answer:"IT Geeks club offers a multitude of events for university students with an interest in computer science such as hackathons, competitions and university events during all the academic year.Events and competitions will be posted in our instagram, facebook and LinkdIn accounts." 
+            answer:
+              "IT Geeks club offers a multitude of events for university students with an interest in computer science such as hackathons, competitions and university events during all the academic year.Events and competitions will be posted in our instagram, facebook and LinkdIn accounts.",
           },
         ]}
       />
       {/* <GetStarted/> */}
-      <Footer 
-       links = {links}
-       socialLinks ={socialLinks}
-      />
+      <Footer links={links} socialLinks={socialLinks} />
     </AnimationRevealPage>
   );
-}
+};

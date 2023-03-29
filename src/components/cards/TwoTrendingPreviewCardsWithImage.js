@@ -37,7 +37,7 @@ const CardImage = styled.div(props => [
 const CardText = tw.div`mt-4`;
 
 const CardHeader = tw.div`flex justify-between items-center`;
-const CardType = tw.div`text-primary-500 font-bold text-lg`;
+const CardType = tw.div`text-blue-500 font-bold text-lg`;
 const CardPrice = tw.div`font-semibold text-sm text-gray-600`;
 const CardPriceAmount = tw.span`font-bold text-gray-800 text-lg`;
 
