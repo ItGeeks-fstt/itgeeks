@@ -69,9 +69,9 @@ export default ({ links, socialLinks }) => {
             >
               Itgeeks
             </a>
-            &nbsp; if you face any problem, please contact the developer. &nbsp;
+            &nbsp; if you face any problem, please submit an issue to our repo in Github. &nbsp;
             <a
-              href="https://developer.itgeeks.social/"
+              href="https://github.com/orgs/ItGeeks-fstt/"
               rel="noreferrer"
               target="_blank"
               style={{ color: "white" }}
