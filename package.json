@@ -7,7 +7,7 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "feather-icons": "^4.29.0",
-    "framer-motion": "^10.12.18",
+    "framer-motion": "^10.12.21",
     "react": "^18.0.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.0.0",
@@ -18,8 +18,8 @@
     "react-scripts": "^5.0.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^6.0.3",
-    "tailwindcss": "^3.3.3",
+    "styled-components": "^6.0.4",
+    "tailwindcss": "^3.3.0",
     "twin.macro": "^3.3.1"
   },
   "scripts": {
@@ -57,6 +57,6 @@
   },
   "devDependencies": {
     "prettier": "^3.0.0",
-    "prettier-plugin-tailwindcss": "^0.3.0"
+    "prettier-plugin-tailwindcss": "^0.4.1"
   }
 }
