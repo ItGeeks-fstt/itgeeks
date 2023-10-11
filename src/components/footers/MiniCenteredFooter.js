@@ -2,7 +2,7 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import {Container as ContainerBase } from "components/misc/Layouts.js"
-import logo from "../../images/logo.jpg";
+import logo from "../../images/logo.png";
 import { Link } from "react-router-dom";
 
 const Container = tw(ContainerBase)`bg-primary-900 text-gray-100 -mx-8 -mb-8`

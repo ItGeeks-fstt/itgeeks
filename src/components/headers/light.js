@@ -7,10 +7,10 @@ import {Link,NavLink} from 'react-router-dom'
 
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
-import logo from "../../images/logo.jpg";
+import logo from "../../images/logo.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
-import NightModeToggler from "./NightModeToggler/NightModeToggler.js";
+
 
 const Header = tw.header`
   flex justify-between items-center
@@ -20,9 +20,6 @@ const Header = tw.header`
 
 export const NavLinks = tw.div`inline-block relative`;
 
-/* hocus: stands for "on hover or focus"
- * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
- */
 
 const NavLinkStyle=` text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
 font-semibold tracking-wide transition duration-300
@@ -125,7 +122,6 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
      IT GEEKS
     </LogoLink>
     </Link>
-    <NightModeToggler /> 
     </NavLeft>
   );
 

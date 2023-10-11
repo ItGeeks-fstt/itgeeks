@@ -6,7 +6,7 @@
     "@testing-library/jest-dom": "^5.16.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
-    "feather-icons": "^4.29.0",
+    "feather-icons": "^4.29.1",
     "framer-motion": "^7.3.2",
     "react": "^18.0.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
@@ -29,7 +29,6 @@
     "eject": "react-scripts eject",
     "deploy": "yarn build && netlify deploy --prod --dir=build",
     "postbuild": "(rmdir /s /q docs && ren build docs) || ( rm -r docs && mv -T build docs)"
-    
   },
   "eslintConfig": {
     "extends": "react-app",

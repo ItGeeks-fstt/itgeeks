@@ -5,27 +5,6 @@ import  { globalStyles } from 'twin.macro'
  
 
 const GlobalStyles = createGlobalStyle(globalStyles, `
-// cusstom css styles for dark /light mood
- #light {
-  background-color: #fff;
-}
- #dark{
-  background-color: #1d2a35!important;
-
-}
-
-#dark p{
-   color: #ddd!important;
-  }
-  #dark h1,#dark h2,#dark .title{
-  color:white;
-}
-#dark img{
-  filter:brightness(.8)
-}
-#dark svg {
-  color:white!important;
-}
 
    /* Below animations are for modal created using React-Modal */z
      .ReactModal__Overlay {
