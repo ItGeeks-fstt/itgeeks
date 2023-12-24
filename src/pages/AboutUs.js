@@ -63,10 +63,10 @@ export default () => {
                     {
                         imageSrc: img2,
                         position: "Vise-president ",
-                        name: "Aya hamza",
+                        name: "Abderrazzak El Bourkadi",
                         links: [
                             {
-                                url: "https://www.linkedin.com/in/badr-benabdellah-75a682241/",
+                                url: "https://ma.linkedin.com/in/abderrazzak-el-bourkadi-88b6b9252",
                                 icon: LinkedinIcon,
                             },
                         ],
