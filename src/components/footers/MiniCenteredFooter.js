@@ -55,7 +55,7 @@ export default ({links,socialLinks}) => {
             &copy; Copyright 2022, Itgeeks Inc. All Rights Reserved.
             This web site is made by our team  <a href="https://www.instagram.com/it_geeks_fstt" rel="noreferrer"  target="_blank">Itgeeks</a> 
              &nbsp; if you face any problem, please contact us. &nbsp; 
-             <a href = "mailto: support@itgeeks.social">support@itgeeks.social</a>
+             <a href = "mailto: support@itgeeks.social">events@itgeeks.social</a>
           </CopyrightText>
         </Row>
       </Content>
